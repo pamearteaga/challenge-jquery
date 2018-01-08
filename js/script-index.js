@@ -65,7 +65,7 @@ function renderActivities(activitiesArray) {
   }
   renderActivity(activitiesArray);
   console.log('Activities: ', activitiesArray);
-}
+};
 
 /*
 * Función que se encarga de pintar una actividad
@@ -73,7 +73,18 @@ function renderActivities(activitiesArray) {
 * archivo "templates/templates-activity.html"
 */
 function renderActivity(activitiesArray) {
-	
-}
+  for (var i in activitiesArray){
+    var avatar = activitiesArray[i].userAvatar;
+    var autor = activitiesArray[i].userName;
+    var texto = activitiesArray[i].text;
+    var receta = activitiesArray[i].recipeName;
+    var locacion = activitiesArray[i].place;
+    var imagenRec = activitiesArray[i].image;
+    $(".list-activities").append('<a href="#" class="item-activity"><span class="attribution"><span class="avatar"><img src="' + avatar + '" class="image-avatar"></span>' + 
+      '<span class="meta"><span class="author">' + autor + '</span> made <span class="recipe">' + receta + '</span>' + 
+      ': ' + texto + '<span class="location">&mdash;' + locacion + '</span></span></span>' + 
+      '<div class="bg-image" style="background-image: url(' + imagenRec + ');"></div></a>');
+  };
+};
 
 
