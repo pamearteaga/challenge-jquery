@@ -12,6 +12,7 @@ $(document).ready( function(){
   //La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
   renderHighlightedRecipes(recipesArray);
 
+//para llamar a la funcion render activities
   renderActivities(activitiesArray);
 
 
@@ -20,27 +21,29 @@ $(document).ready( function(){
 
 
 /*
-* Función que se encarga de pintar TODAS las recetas que tengan 
+* Función que se encarga de pintar TODAS las recetas que tengan
 * marcado el atributo "highlighted" como TRUE
 */
 
+//ETAPA 3
 var recipe = [];
 function renderHighlightedRecipes(recipesArray) {
   for (var i in recipesArray) {
-   if (recipesArray[i].highlighted == true) {
-    recipe.push(recipesArray[i]);
-   }
+    if (recipesArray[i].highlighted == true) {
+      recipe.push(recipesArray[i]);
+    }
   }
   renderRecipe(recipe);
 };
 
 
 /*
-* Función que se encarga de pintar UNA recetas que tenga 
+* Función que se encarga de pintar UNA recetas que tenga
 * marcado el atributo "highlighted" como TRUE
-* Aqui se tiene que crear el HTML que esta en el 
+* Aqui se tiene que crear el HTML que esta en el
 * archivo "templates/templates-recipe.html"
 */
+//ETAPA 4
 function renderRecipe(recipe) {
   for (var i in recipe){
     var titleRecipe = recipe[i].title;
@@ -57,6 +60,7 @@ function renderRecipe(recipe) {
 /*
 * Función que se encarga de pintar todas las actividades
 */
+//ETAPA 5
 function renderActivities(activitiesArray) {
   for (var i in activitiesArray){
     if (activitiesArray.length > 0) {
@@ -69,9 +73,10 @@ function renderActivities(activitiesArray) {
 
 /*
 * Función que se encarga de pintar una actividad
-* Aqui se tiene que crear el HTML que esta en el 
+* Aqui se tiene que crear el HTML que esta en el
 * archivo "templates/templates-activity.html"
 */
+//ETAPA 6
 function renderActivity(activitiesArray) {
   for (var i in activitiesArray){
     var avatar = activitiesArray[i].userAvatar;

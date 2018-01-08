@@ -1,7 +1,9 @@
 $(document).ready( function(){
 
-// ocultar boton menu (ETAPA 1)
+  //ETAPA 7
+  console.log("Listo :-)");
+
+  //ocultar boton menu (ETAPA 1)
   $(".js-menu").hide();
 
-  
 });
