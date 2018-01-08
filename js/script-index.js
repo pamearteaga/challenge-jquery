@@ -1,7 +1,14 @@
 $(document).ready( function(){
 
-// ocultar flecha
-  $(".js-back").hide();
+// ocultar flecha (ETAPA 1)
+$(".js-back").hide();
+
+// funcion para imprimir "NUEVAS RECETAS" (ETAPA 2)
+function printNews(){
+  $("#nuevas-recetas").append('NUEVAS RECETAS');
+};
+printNews();
+
 
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
