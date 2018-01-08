@@ -9,20 +9,27 @@ function printNews(){
 };
 printNews();
 
-
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	renderHighlightedRecipes(recipesArray);
 
-});
+}); // ready
 
 
 /*
 * Función que se encarga de pintar TODAS las recetas que tengan 
 * marcado el atributo "highlighted" como TRUE
 */
+
+var recipe = [];
 function renderHighlightedRecipes(recipesArray) {
-	console.log('Recipes: ', recipesArray);
-}
+  for (var i in recipesArray) {
+   if (recipesArray[i].highlighted == true) {
+    recipe.push(recipesArray[i]);
+   }
+  }
+  renderRecipe(recipe);
+};
+
 
 /*
 * Función que se encarga de pintar UNA recetas que tenga 
