@@ -15,8 +15,6 @@ $(document).ready( function(){
 //para llamar a la funcion render activities
   renderActivities(activitiesArray);
 
-
-
 }); // ready
 
 
